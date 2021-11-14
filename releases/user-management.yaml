@@ -12,7 +12,7 @@ spec:
   chart:
     repository: https://texyh.azurecr.io/helm/v1/repo/
     name: user-management
-    version: 0.1.2
+    version: 0.1.5
   values:
     image:
       repository: texyh.azurecr.io/user-management
