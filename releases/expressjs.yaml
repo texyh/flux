@@ -1,19 +1,16 @@
----
 apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
-  name: user-management
-  namespace: default
+  name: expressjs-k8s
   annotations:
     fluxcd.io/automated: "true"
-    filter.fluxcd.io/chart-image: semver:~0.1
+    filter.fluxcd.io/chart-image: semver:~0.3
 spec:
-  releaseName: user-management
   chart:
-    repository: https://texyh.azurecr.io/helm/v1/repo/
-    name: user-management
-    version: 0.1.2
+    repository: https://alexellis.github.io/expressjs-k8s/
+    name: expressjs-k8s
+    version: 0.1.1
   values:
-    image:
-      repository: texy.azurecr.io/user-management
-      tag: 0.1.2
+    ingress:
+      enabled: false
+    image: alexellis2/service:0.3.7
