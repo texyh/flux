@@ -1,0 +1,19 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: user-management
+  namespace: default
+  annotations:
+    fluxcd.io/automated: "true"
+    filter.fluxcd.io/chart-image: semver:~0.1
+spec:
+  releaseName: user-management
+  chart:
+    repository: https://texyh.azurecr.io/helm/v1/repo/
+    name: user-management
+    version: 0.1.2
+  values:
+    image:
+      repository: texy.azurecr.io/user-management
+      tag: 0.1.2
