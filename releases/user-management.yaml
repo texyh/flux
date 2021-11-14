@@ -15,5 +15,5 @@ spec:
     version: 0.1.2
   values:
     image:
-      repository: texy.azurecr.io/user-management
+      repository: texyh.azurecr.io/user-management
       tag: 0.1.2
