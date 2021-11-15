@@ -16,4 +16,4 @@ spec:
   values:
     image:
       repository: texyh.azurecr.io/user-management
-      tag: 0.1.17
+      tag: 0.1.18
